@@ -1,0 +1,95 @@
+{| style="float:center; width:70em; border:3px solid #202020; background-color:#303030; margin-bottom:1.5em; margin-left:0.5em; padding:0.2em; font-size:89%; color:#FFFFCC;"
+|-
+! colspan="2" style="background-color:#404040; font-size:120%; padding:0.5em;" | {{PAGENAME}}
+|- style="text-align:center"
+| colspan="2" style="padding:0.5em;" | [[image:wiki.png|100px]]<br/>''SuperWikia Logic''
+|-
+! colspan="2" style="background-color: #404040; padding:0.5em;" |  Tutorial
+|-
+|SuperWikia 'E-Manual': Transcriber Tutorial
+
+Transcriber is a general organizer of documents. It uses data to sort and 'staple' data groups and store the new groups in organized sets of information. The extension is extensible in that it allows a 
+
+multitude of variables to be included during creation of transcribes that in turn can be used to create more features.
+
+The foundation and centermost directive of the extension is to establish and deploy acronym-based triggers that can target existing and newly created variables. These triggers are maintain within 
+
+the extension using seven designators, which consist of the following:
+
+==SERIAL VARIABLES-== 
+'''Serial Variables''' are the most elementary human readable components of
+transcribe documents. They are created using alphbetical designators and
+generally form the transcribe's acronmy foundation, as seen here:
+
+Serial exp: A, B, C,...
+
+------------------------------------------------------------------------
+
+==TRUNK VARIABLES-== 
+'''Trunk Variables''' are delimiters used to separate one serial from another.
+They are extensible in that they allow passing of functions and
+transclusions.
+
+Trunk exp: (A),(B),(C),...
+------------------------------------------------------------------------
+
+==ASSEMBLY VARIABLES-== 
+'''Assembly Variables''' define the actual transcribe in its most coherent
+state; such as the COMPUTING illustration. These variable are assigned
+to other transcribe functions to execute specific commands.
+
+Assembly exp:
+
+ TRANSCRIBE_( "ARRAY" )= (_(C),(O),(M),(P),(U),(T),(I),(N),(G)_);
+    $wgTranscribeSettings = "http://www.sitename.com/$IP/LocalSettings";
+    $wgTranscribeTemplates = true;
+    $wgTranscribeAliasing = array('computing','Computing','Compute');
+    $wgTranscribeProxeumConfigure =    array('User:UsernameA','User:UsernameB');
+    $wgTranscribeLocalization = array(
+        define("NS_TRANSCRIBE_LOCALIZATION",802);
+        $wgExtraNamespaces[NS_TRANSCRIBE_LOCALIZATION] = "Transcribe:COMPUTING";
+        define("NS_TRANSCRIBE_LOCALIZATION_TALK",803);
+        $wgExtraNamespaces[NS_TRANSCRIBE_LOCALIZATION_TALK] = "Transcribe:COMPUTING_Talk";
+    $wgTranscribeEnable =    array('COMPUTING');
+    $wgTranscribeSafeMode = array('');
+------------------------------------------------------------------------
+
+==PLATFORM VARIABLES-== 
+'''Platform Variables''' give additional agility to variables by further grouping existing assemblies. They are considered the final component of the acronym data type. These 
+
+variables group together smaller components in a compact and code-friendly means to buffer the smaller high activity variables from the slow traffic large transcribe files. They also serve as a cache 
+
+for any given transcribe data types.
+
+TRANSCRIBE_PLATFORM( "ARRAY" )= (_(COMPUTING), (PROGRAMS), (CREATE), (CLASSES)_);
+-------------------------------------------------------------------------
+
+==LEXICON-== 
+'''Lexicons''' are walking documents used to reference transcribe data. They general enable parsing of variable information between two or more functions, documents, folders, directories 
+
+or servers. Lexicons must contain all transcribe data (printed or manual) or an error will result when a behavior is triggered; in other words, the site may not be accessible.
+
+TRANSCRIBE_LEXICON( "ARRAY" )= (_(COMPUTING), (PROGRAMS), (CREATE), (CLASSES)_);
+       (_(COMPUTING_2), (PROGRAMS_2), (CREATE_2), (CLASSES_2)_);
+       (_(COMPUTING_3), (PROGRAMS_3), (CREATE_3), (CLASSES_3)_);
+-------------------------------------------------------------------------
+
+==ELECTROPLATE-== 
+'''Electroplates''' generally are the entire collective of related transcribes of which two or more functions are enabled. This document creates flexibility of coding and gives additional 
+
+cache capability to programmers. Specific extension based and API (XML) data may be gathered from electroplates to add even more features if the editor has administrative privileges.
+
+TRANSCRIBE_ELECTROPLATE( "ARRAY" )= (_(LEXICON_1), (LEXICON_2), (LEXICON_3), (LEXICON_4)_);
+-------------------------------------------------------------------------
+
+==SEQUENCES-== 
+'''Sequences''' are basically the U/I outpt pages of the transcribe. They may consist of dynamic (functions or tags) or inline events such as special pages. System messages are also defined by the sequence type of the transcribe.
+--------------------------------------------------------------------------
+==External Dependencies & Similar Extensions==
+#Placeholder
+#OFlash
+#DynamicPageList
+#NamespaceManager
+#Arrays
+#ReplaceText
+#Boilerplate
